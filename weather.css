@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sacramento&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Riot&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sacramento&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+#b_image{
+    height: 100vh;
+    width: 1519px;
+    position: relative;
+    z-index: 0;
+}
+.container12{
+    position: relative;
+    top: -102vh;
+    height: 0px;
+}
+#search{
+    height: 21px;
+}
+
+.heading{
+    background-size: 100vw;
+    box-sizing: border-box;
+    color: rgb(229, 101, 16);
+    height: 50vh;
+    font-size: 90px;
+    font-style: italic;
+    background-repeat: no-repeat;
+    margin: auto;
+    font-family: "Protest Riot", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    position: relative;
+    padding: 60px;
+}
+.output{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    width: 30vw;
+    height: 40vh;
+    text-align: center;
+    align-items:baseline;
+    border: 2px solid black;
+    margin: 10px auto;
+    background-color: rgb(204 225 239);
+}
+.weather{
+    padding: 4px;
+}
+
+ul{
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+    align-items: center;
+    height: 30px;
+}
+li{
+    list-style: none;
+}
+nav{
+    background-color: beige;
+    padding: 5px;
+    position: sticky;
+    top: 0px;
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+#inp{
+    position: relative;
+}
+#inp>img{
+    position: absolute;
+    left: 147px;
+    top: 5px;
+    cursor: pointer;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+.weather{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+#pressure{
+    font-size: 18px;
+}
+#temp{
+    text-align:left;
+    font-size: 40px;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+#location{
+    font-size: 20px;
+}
+#descr{
+    padding-left: 0px;
+}
+@keyframes headinganimate {
+    from{
+        z-index: -10;
+    }
+    to{
+        z-index: 10;
+    }
+}
+.text1{
+    animation-name: headinganimate;
+    animation-duration: 2s;
+    animation-fill-mode: ease;
+}
+.text2{
+    animation-name: headinganimate;
+    animation-duration: 2s;
+    animation-fill-mode: ease;
+    animation-delay: 2s;
+}

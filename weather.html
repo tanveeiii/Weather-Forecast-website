@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="weather.css">
+</head>
+
+<body>
+    <img src="bg img.jpg" id="b_image" alt="">
+<div class="container12">
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About </li>
+            <li>Contact us</li>
+        </ul>
+        <ul>
+            <li>Enter any location</li>
+            <li id="inp">
+                <input type="text" name="search" id="search">
+                <img src="search icon.webp" width="15px" alt="" onclick="getweather()">
+            </li>
+        </ul>
+    </nav>
+
+
+    <div class="heading">
+        <div class="text1">Welcome to</div>
+        <div class="text2">InfoWeather</div>
+    </div>
+    <div class="container">
+        <div class="output">
+            <div class="empty"></div>
+            <div class="weather" id="location"></div>
+            <div class="weather" id="temp">
+                <span><img id="icon"></span>
+                <span id="tempvalue"></span>
+            </div>
+            <div class="weather" id="pressure"></div>
+            <div class="weather" id="descr"></div>
+            <div class="weather" id="humidity"></div>
+            <div class="empty"></div>
+            <div class="weather" id="visibility"></div>
+            <div class="empty"></div>
+            <div class="weather" id="windspeed"></div>
+            <div class="empty"></div>
+            <div class="weather" id="winddir"></div>
+        </div>
+    </div>
+</div>
+    <script src="weather.js"></script>
+</body>
+
+</html>
