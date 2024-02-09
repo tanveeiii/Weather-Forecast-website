@@ -1,16 +1,16 @@
-async function getlat(){
-    let city = document.getElementById("search").value 
-    let resp = await fetch("http://api.openweathermap.org/geo/1.0/direct?q="+city+"&limit=5&appid=61ac732d212c0f110eb0e5b701c7ca0b")
+async function getlat(){ // function to get latitude of the place
+    let city = document.getElementById("search").value //getting the value of the entered location
+    let resp = await fetch("http://api.openweathermap.org/geo/1.0/direct?q="+city+"&limit=5&appid=61ac732d212c0f110eb0e5b701c7ca0b") //api to fetch latitude 
     let data = await resp.json();
     return data[0].lat
 }
-async function getlong(){
-    let city = document.getElementById("search").value 
-    let resp = await fetch("http://api.openweathermap.org/geo/1.0/direct?q="+city+"&limit=5&appid=61ac732d212c0f110eb0e5b701c7ca0b")
+async function getlong(){ // function to get the longitude of the place
+    let city = document.getElementById("search").value //getting the value of the entered location
+    let resp = await fetch("http://api.openweathermap.org/geo/1.0/direct?q="+city+"&limit=5&appid=61ac732d212c0f110eb0e5b701c7ca0b") // api to fetch longitude
     let data = await resp.json();
     return data[0].lon
 }
-async function getweather(){
+async function getweather(){ // function to get the weather details of the entered location
     let lat = await getlat()
     let long = await getlong()
 
@@ -18,7 +18,7 @@ async function getweather(){
     let data = await resp.json()
 
     let temp = data.main.temp - 273.15
-    temp = temp.toFixed(3)
+    temp = temp.toFixed(3) //rounding off the temperature to 3 decimals
     let pressure = data.main.pressure
     let humidity = data.main.humidity
     let visibility = data.visibility
@@ -51,14 +51,14 @@ async function getweather(){
 }
 
 document.getElementById("search").addEventListener("keyup", function(event )  {
-    if (event.key === "Enter") {
+    if (event.key === "Enter") { //adding event listener so that when enter key is pressed the getweather() function is called
       getweather();
     }
 })
 
 async function success(pos){
     let cdnts = pos.coords;
-    let lat = cdnts.latitude;
+    let lat = cdnts.latitude; //getting the coordinates of the current location
     let long = cdnts.longitude;
     console.log(lat);
     console.log(long);
