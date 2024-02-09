@@ -107,22 +107,4 @@ nav{
 #descr{
     padding-left: 0px;
 }
-@keyframes headinganimate {
-    from{
-        z-index: -10;
-    }
-    to{
-        z-index: 10;
-    }
-}
-.text1{
-    animation-name: headinganimate;
-    animation-duration: 2s;
-    animation-fill-mode: ease;
-}
-.text2{
-    animation-name: headinganimate;
-    animation-duration: 2s;
-    animation-fill-mode: ease;
-    animation-delay: 2s;
-}
+
